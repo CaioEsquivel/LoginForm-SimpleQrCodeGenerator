@@ -4,7 +4,7 @@ import './index.css'
 import './App.css'
 import { LoginPage } from './Pages/Login.jsx'
 import { RegisterPage } from './Pages/Register.jsx'
-import { ErrorPage } from './Pages/undefined.jsx'
+import { ErrorPage } from './Pages/Undefined.jsx'
 import { Qrcode } from './Pages/Qrcode.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 

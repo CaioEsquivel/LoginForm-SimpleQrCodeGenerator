@@ -1,0 +1,11 @@
+.left-title h1{
+    color: var(--black);
+    font-size: var(--text-h1);
+    font-weight: var(--font-bold);
+}
+.left-title h3{
+    color: var(--black);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-h3);
+    margin: 0px 20px;
+}

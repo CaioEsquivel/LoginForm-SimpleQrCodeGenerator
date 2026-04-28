@@ -1,0 +1,138 @@
+.right-side-container{
+    width: 100%;
+    height: 100%; /* ou defina uma altura fixa/min-height */
+    position: relative;
+    overflow: hidden;
+} 
+.right-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: translateY(-20px) scale(1.1);
+    filter: blur(2px) brightness(0.6);
+}
+.right-text > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px; 
+    width: 80%; 
+    text-align: center;
+    color: var(--color-text);
+    font-weight: var(--font-semibold);
+}
+
+.pop-up{
+    background-color: white;
+    border-radius:15px ;
+    width: 340px;
+    height: 80px;
+    position: absolute;
+    right: 5%;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all .25s ease;
+    
+}
+.ancoraClass{
+    color: #0F0F1A;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid #0F0F1A;
+    padding: 5px 10px;
+    border-radius: 22px;
+    font-weight: 600;
+    transition: all .25s ease;
+    z-index: 2;
+}
+
+.pop-up img{
+    background: #0F0F1A;
+    width: 35px;
+    border-radius: 50%;
+}
+.ancoraClass:hover {
+    transform: scale(1.05);
+    background-color: #4C1D95;
+    color: white;
+}
+.ancoraClass:active {
+    transform: scale(0.98);
+}
+.pop-up:has(.ancoraClass:hover){
+    background: transparent;
+    transform: translateY(-10px);
+}
+.ancoraClass:hover + .triangle img{
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.triangle img {
+    width: 40px;
+    background: transparent;
+    
+    clip-path: inset(0 0 20px 0);
+    border-radius: 10px;
+    
+    position: absolute;
+    left: 80%;
+    top: 0px;
+    transform: translateY(-20px);
+    z-index: 0;
+    transition: all .2s ease;
+}
+
+
+
+
+
+@media (max-width: 1080px){
+.right-text > span{
+    font-size: 42px;
+}
+
+
+    
+
+}
+@media (max-width: 841px){
+
+    .right-side-container{
+        display: none;
+    }
+.ancoraClass span{
+    display: none;
+}
+.ancoraClass{
+    border-radius: 50%;
+    padding: 4px;
+}
+.ancoraClass:hover{
+    background-color: #663da5;
+}
+.pop-up {
+    width: fit-content;
+    background: transparent;
+    top: 10px;
+    right: 5%;
+    left: auto;
+}
+.triangle img {
+    display: none;
+}
+.pop-up:has(.ancoraClass:hover){
+    background: transparent;
+    transform: translateX(-50%) translateY(0px);
+}
+
+
+}

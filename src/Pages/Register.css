@@ -1,0 +1,87 @@
+:root {
+  /* 🎨 Brand */
+  --color-primary: #390c6b;      /* roxo principal */
+  --color-primary-hover: #4C1D95;
+
+  /* 🌑 Fundo */
+  --color-bg: #0F0F1A;           /* quase preto com roxo */
+  --color-surface: #1A1A2E;      /* cards / inputs */
+
+  /* ✍️ Texto */
+  --color-text: #F9FAFB;         /* branco suave */ 
+  --color-text-muted: #A1A1AA;   /* cinza único */
+
+  /* 🔲 Borda */
+  --color-border: #2E2E3E;
+
+  /* 🎯 Estados */
+  --color-success: #10B981;
+  --color-error: #EF4444;
+
+
+
+  --black: #111827;
+
+
+  /* 🧠 Weights */
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-regular: 400;
+
+  /* 🔠 Headers */
+  --text-h1: 56px;
+  --text-h2: 36px;
+  --text-h3: 18px;
+
+  /* 📄 Body */
+  --text-body-lg: 18px;
+  --text-body-md: 16px;
+  --text-body-sm: 14px;
+
+}
+.right-side-container{
+    background-color: #a1f9ff;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+} 
+.left-side-container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.line-decoration{
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+
+.left-form-container{
+
+    width: 100%;
+}
+.left-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.left-popup{
+    display: none;
+}
+@media (max-width: 821px){
+    .left-popup{
+        display: block;
+    }
+
+    .line-decoration{
+        display: none;
+    }
+    .left-side-container{
+        width: 100%;
+    }
+    
+
+}

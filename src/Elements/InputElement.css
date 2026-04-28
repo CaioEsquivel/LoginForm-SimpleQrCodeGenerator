@@ -1,0 +1,13 @@
+
+.left-input{
+    width: 100%;
+    padding: 10px;
+    font-size: var(--text-body-lg);
+    border-radius: 12px;
+    border: 1px solid var(--black);
+}
+
+.left-input:not(:placeholder-shown) + span, .left-input:focus + span{
+    color: var(--black) !important;
+    top: -10px;
+}

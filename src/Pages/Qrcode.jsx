@@ -16,7 +16,7 @@ export const Qrcode=()=>{
         const encodedLink = encodeURIComponent(inputValue)
         setQrcodeLink(`https://api.qrserver.com/v1/create-qr-code/?data=${encodedLink}&size=${150}x${150}`)
         await setTimeout(() => {
-            setTextContent("Conteudo inválido")
+            setTextContent("Carregando...")
             
         }, 100);
 
@@ -35,7 +35,7 @@ export const Qrcode=()=>{
             <LeftTitle />
             <div className="container-img">
                 <p>{textContent}</p>
-                <img src={qrcodeLink}  alt="" />
+                <img src={qrcodeLink} onError={()=>setTextContent("Valor inválido")} alt="" />
             </div>
             <div className="input-wrapper">
                 <input type="text" className="left-input" placeholder=" " required onChange={(e)=>{setInputValue(e.target.value)}} />
@@ -43,7 +43,7 @@ export const Qrcode=()=>{
             </div>
             <div className="input-button">
                 <button onClick={submit}>Criar</button>
-                <button onClick={deleteQrcode}>Apagar</button>
+                <button onClick={deleteQrcode}>Retroceder</button>
                 <Link to="/" className="input-link">Fazer login</Link>
             </div>
         </div>

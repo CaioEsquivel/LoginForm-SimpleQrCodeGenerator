@@ -24,6 +24,114 @@
 }
 .container-img p{
     color: white;
+    width: 150px;
+    font-size: 22px;
+    font-weight: 600;
+    z-index: 0;
+    position: absolute;
+}
+.container-img img{
+    z-index: 1;
+}
+
+.input-wrapper span{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s;
+    pointer-events: none;
+    color: rgb(88, 88, 88);
+}
+
+.left-input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid black;
+    
+}
+
+.left-input:not(:placeholder-shown) + span,
+.left-input:focus + span{
+    color: black;
+    top: -20px;
+}
+.input-button {
+    width: 100%;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    gap: 20px;
+}
+.input-button button{
+    width: 50%;
+    height: 40px;
+    border-radius:10px ;
+    background-color: #340e4e;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    transition: all .25s ease;
+}
+.input-button button:hover{
+    background-color: #6a2996;
+}
+.input-button button:active{
+    transform: scale(0.98);
+}
+.input-link{
+    color: #000000;
+    font-size: 16px;
+}
+.input-link:hover{
+    color: #340e4e;
+    font-size: 16px;
+}
+@media (max-width: 660px) {
+    .input-wrapper{
+        width: 80%;
+    }   
+    .input-button button{
+        width: 80%;
+    }
+}
+@media (min-width: 1059px) {
+    .input-wrapper{
+        width: 600px;
+    }   
+    .input-button button{
+        width: 600px;
+    }
+}
+.input-wrapper{
+    position: relative;
+    width: 50%;
+}
+.container-qrcode{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container-img{
+    width:200px ;
+    height:200px ;
+    border-radius: 20px;
+    background: linear-gradient(40deg, rgba(24, 11, 72, 1) 0%, rgba(9, 8, 9, 1) 50%, rgba(35, 18, 96, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+.container-img p{
+    color: white;
     width: 180px;
     font-size: 22px;
     font-weight: 600;

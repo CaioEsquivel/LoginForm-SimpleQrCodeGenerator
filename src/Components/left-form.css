@@ -78,11 +78,10 @@
 }
 
 @media (max-width: 821px){
-    
-    .left-input-container{
-        width: 80%;
-        position: relative;
+    .left-form{
+        gap: 10px;
     }
+
     
     
 }
@@ -95,4 +94,6 @@
     .span-container{
         flex-direction: column;
     }
+}
+@media (max-width: 500px) {
 }
